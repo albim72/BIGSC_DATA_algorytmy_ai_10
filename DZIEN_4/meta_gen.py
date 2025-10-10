@@ -174,3 +174,13 @@ if __name__ == "__main__":
     print("\nPredykcje:")
     for x in test_points:
         print(f"x={x:>4}: pred={clf.predict(x)}")
+
+    print("____________________________________________")
+    class MojaNowa(ThresholdClassifier):
+      def fitness(self, genome: Dict[str, float]) -> float:pass
+
+    mn = MojaNowa()
+    test_points = [-1.1, -0.03, 0.3, 1,4, 2.3]
+    print("\nPredykcje:")
+    for x in test_points:
+        print(f"x={x:>4}: pred={clf.predict(x)}")
